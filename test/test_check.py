@@ -34,6 +34,19 @@ class ArmstrongNumber(unittest.TestCase):
         result = check.armstrong(154,0)
         assert result == "Error"
 
+    def test_employee_pass(mocker):
+        patch('mini.src.check.employee', return_value={'id':1})
+        result = check.employee()
+        assert result == {'id': 1}
+
+    def test_employee_fail(mocker):
+        patch('mini.src.check.employee', return_value={'id':1})
+        result = check.employee()
+        assert result == "Error"
+
+
+
+
 
 
 
